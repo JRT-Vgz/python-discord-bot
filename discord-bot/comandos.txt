@@ -1,0 +1,35 @@
+
+------------------------------ PROCESO ------------------------------ 
+EDITAR ARCHIVO ENTORNO SYSTEM
+nano /etc/systemd/system/discord-bot.service
+
+VER EL ESTADO DEL SERVICIO
+systemctl status discord-bot.service
+
+REINICIAR EL ENTORNO SYSTEM (si he hecho cambios en el archivo)
+sudo systemctl daemon-reload
+sudo systemctl restart discord-bot.service
+
+------------------------------ DESCARGAR Y SUBIR ARCHIVOS ------------------------------ 
+Descargas:
+scp vargath@217.154.126.198:/root/discord-bot/comandos.txt /c/Users/Miguel/Downloads
+
+Subidas:
+scp /c/Users/Miguel/Downloads/comandos.txt vargath@217.154.126.198:/root/discord-bot/
+
+
+------------------------------ REINICIAR EL BOT ------------------------------ 
+REINICIAR EL BOT
+sudo systemctl stop discord-bot.service
+sudo systemctl start discord-bot.service
+
+
+------------------------------ OTROS ------------------------------ 
+VER PROCESOS ACTIVOS 
+ps aux | grep main.py
+
+PARAR EL PROCESO
+pkill -f main.py
+
+VER EL LOG DEL PROCESO DE MONITORIZACION DE LA CARPETA PARA ACTIVAR EL REINICIO DEL BOT
+sudo journalctl -u discord-bot-watch.service -f
