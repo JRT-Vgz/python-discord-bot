@@ -12,10 +12,10 @@ sudo systemctl restart discord-bot.service
 
 ------------------------------ DESCARGAR Y SUBIR ARCHIVOS ------------------------------ 
 Descargas:
-scp vargath@217.154.126.198:/root/discord-bot/comandos.txt /c/Users/Miguel/Downloads
+scp vargath@<IP>:/root/discord-bot/comandos.txt /c/Users/Miguel/Desktop/python-discord-bot/discord-bot
 
 Subidas:
-scp /c/Users/Miguel/Downloads/comandos.txt vargath@217.154.126.198:/root/discord-bot/
+scp /c/Users/Miguel/Desktop/python-discord-bot/discord-bot/comandos.txt vargath@<IP>:/root/discord-bot/
 
 
 ------------------------------ REINICIAR EL BOT ------------------------------ 
